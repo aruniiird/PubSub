@@ -14,3 +14,18 @@ Program flow
 Python Program
 ---------------
 A simple python pub/sub program, which relies on etcd server and uses etcd watch functionality.
+
+Usage
+-----
+
+Subscriber
+-----------
+python PubSub.py [--host=<etcd_server>] [--port=<etcd_client_port>] subscribe -k <key> [-t <timout_in_seconds>]
+
+Publisher
+---------
+python PubSub.py [--host=<etcd_server>] [--port=<etcd_client_port>] publish -k <key> -v <value>
+
+Delete
+------
+python PubSub.py [--host=<etcd_server>] [--port=<etcd_client_port>] delete -k <key>
