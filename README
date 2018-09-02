@@ -1,0 +1,16 @@
+This is an example program to do a pub/sub scenario using etcd watch
+
+Pre-requisites
+--------------
+	etcd
+	python
+	etcd client for python
+
+Program flow
+------------
+  start etcd server (version 3.x)
+  Python program which uses watch functionality of etcd to do publisher / subscriber test
+
+Python Program
+---------------
+A simple python pub/sub program, which relies on etcd server and uses etcd watch functionality.
