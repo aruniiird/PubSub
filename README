@@ -6,26 +6,26 @@ Pre-requisites
 	python
 	etcd client for python
 
-Program flow
-------------
-  start etcd server (version 3.x)
-  Python program which uses watch functionality of etcd to do publisher / subscriber test
+Program Pre-requisites
+-----------------------
+  etcd server version 3.x, installed and running on a host
+  etcd3 python client library installed
 
 Python Program
 ---------------
-A simple python pub/sub program, which relies on etcd server and uses etcd watch functionality.
+	A simple python pub/sub program, which relies on etcd server and uses etcd watch functionality. It requires 'etcd3' python client library installed.
 
 Usage
 -----
 
-Subscriber
------------
-python PubSub.py [--host=<etcd_server>] [--port=<etcd_client_port>] subscribe -k <key> [-t <timout_in_seconds>]
+	Subscriber
+	-----------
+	python PubSub.py [--host=<etcd_server>] [--port=<etcd_client_port>] subscribe -k <key> [-t <timout_in_seconds>]
 
-Publisher
----------
-python PubSub.py [--host=<etcd_server>] [--port=<etcd_client_port>] publish -k <key> -v <value>
+	Publisher
+	---------
+	python PubSub.py [--host=<etcd_server>] [--port=<etcd_client_port>] publish -k <key> -v <value>
 
-Delete
-------
-python PubSub.py [--host=<etcd_server>] [--port=<etcd_client_port>] delete -k <key>
+	Delete
+	------
+	python PubSub.py [--host=<etcd_server>] [--port=<etcd_client_port>] delete -k <key>
